@@ -14,7 +14,6 @@ public class EntityB extends CommonEntity {
 
     @JdbcTypeCode(SqlTypes.JSON)
     @Type(JsonType.class)
-    @Column(name = "property", columnDefinition = "json")
     private PropertyTypeB property = new PropertyTypeB();
 
     public PropertyTypeB getProperty() {
