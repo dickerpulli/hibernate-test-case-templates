@@ -37,12 +37,12 @@ public class JPAUnitTestCase {
 
         EntityA entityA = new EntityA();
         entityA.setId(1L);
-        entityA.getProperty().setPropertyA("foo");
+        entityA.getProperty().setPropertyA(1);
         entityManager.merge(entityA);
 
         EntityB entityB = new EntityB();
         entityB.setId(2L);
-        entityB.getProperty().setPropertyB("bar");
+        entityB.getProperty().setPropertyB(2);
         entityManager.merge(entityB);
 
         // This call works, because we use the concrete subclass in the query

@@ -2,13 +2,13 @@ package org.hibernate.bugs.entities;
 
 public class PropertyTypeB {
 
-    private String propertyB;
+    private Integer propertyB;
 
-    public String getPropertyB() {
+    public Integer getPropertyB() {
         return propertyB;
     }
 
-    public void setPropertyB(String propertyB) {
+    public void setPropertyB(Integer propertyB) {
         this.propertyB = propertyB;
     }
 }
