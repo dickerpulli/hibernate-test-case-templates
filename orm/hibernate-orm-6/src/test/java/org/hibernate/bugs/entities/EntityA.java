@@ -1,11 +1,8 @@
 package org.hibernate.bugs.entities;
 
-import com.vladmihalcea.hibernate.type.json.JsonType;
-import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import org.hibernate.annotations.JdbcTypeCode;
-import org.hibernate.annotations.Type;
 import org.hibernate.type.SqlTypes;
 
 @Entity
@@ -13,7 +10,6 @@ import org.hibernate.type.SqlTypes;
 public class EntityA extends CommonEntity {
 
     @JdbcTypeCode(SqlTypes.JSON)
-    @Column(name = "property", columnDefinition = "json")
     private PropertyTypeA property = new PropertyTypeA();
 
     public PropertyTypeA getProperty() {

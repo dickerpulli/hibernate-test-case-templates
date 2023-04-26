@@ -8,6 +8,8 @@ public class PropertyTypeB {
     }
 
     public PropertyTypeB(String propertyB) {
+        // Hibernate needs this constructor, but doesn't use it :-)
+        // See https://hibernate.atlassian.net/browse/HHH-15929
     }
 
     public Integer getPropertyB() {

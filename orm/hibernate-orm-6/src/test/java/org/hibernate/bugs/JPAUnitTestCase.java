@@ -3,6 +3,7 @@ package org.hibernate.bugs;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
+import jakarta.persistence.Query;
 import org.assertj.core.api.Assertions;
 import org.hibernate.bugs.entities.CommonEntity;
 import org.hibernate.bugs.entities.EntityA;
@@ -36,6 +37,9 @@ public class JPAUnitTestCase {
     public void hhh15929Test() throws Exception {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         entityManager.getTransaction().begin();
+
+        Query nativeQuery = entityManager.createNativeQuery("create table table_test (id integer, type char, property json)");
+        nativeQuery.executeUpdate();
 
         EntityA entityA = new EntityA();
         entityA.setId(1L);
